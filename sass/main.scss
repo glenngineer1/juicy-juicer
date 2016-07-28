@@ -1,0 +1,59 @@
+//Navigation Bar Styling//
+
+.nav-links {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.logo {
+  display: inline-block;
+}
+
+.login-area {
+  display: inline-block;
+}
+
+.login-text {
+  display: inline-block;
+}
+
+.login-button {
+  display: inline-block;
+}
+
+.register-button {
+  display: inline-block;
+}
+
+//Recipe HTML Styling//
+.recipe-card {
+  border: solid black 2px;
+  width: 27%;
+  display: inline-block;
+}
+
+//Create Juice HTML Styling//
+.fruit-list {
+  border: solid black 2px;
+}
+
+.vegetable-list {
+  border: solid black 2px;
+}
+
+.ingredient-list {
+  border: solid black 2px;
+}
+
+.color-of-drink {
+  width: 100px;
+  height: 100px;
+  border: solid black 2px;
+}
+
+//Favorites/My Recipes Styling//
+.favorite-card {
+  border: solid black 2px;
+  width: 27%;
+  display: inline-block;
+}

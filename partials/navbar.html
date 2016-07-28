@@ -1,3 +1,42 @@
 <nav ng-controller="navbarCtrl">
-  <h1>navbar</h1>
+
+  <div>
+
+    <div class="logo">
+      <p>Logo Goes Here</p>
+    </div>
+
+<!-- //Links to other views that iterate thru navItems in navbarCtrl.js// -->
+
+    <ul ng-repeat="items in navItems" class="nav-links" >
+      <li><a href="{{items.url}}">{{items.name}}</a></li>
+    </ul>
+
+<!-- //place to put user login// -->
+
+  <div class="login-area">
+
+      <div class="login-text">
+        <label for="email">Email:</label>
+        <input type="text" placeholder="Enter Email" />
+      </div>
+
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" placeholder="Enter Password" />
+      </div>
+
+    <div>
+      <div class="login-button">
+        <button>Login</button>
+      </div>
+
+      <div class="register-button">
+        <button>Register</button>
+      </div>
+    </div>
+
+  </div>
+
+  </div>
 </nav>
