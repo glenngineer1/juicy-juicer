@@ -4,9 +4,39 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Juicy Juicer</title>
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="styles/main.css">
 </head>
-<body>
-<h1>The Juice</h1>
+<body ng-app="JuicyJuicerApp">
+
+<!-- //Navbar will be present on all views// -->
+  <div ng-include="'partials/navbar.html'"></div>
+
+<!-- //Injection point of partials// -->
+  <div ng-view></div>
+
+<!-- //Third Party Libraries// -->
+  <script src="lib/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="lib/bower_components/angular/angular.min.js"></script>
+  <script src="/lib/bower_components/angular-route/angular-route.min.js"></script>
+  <script src="/lib/bower_components/firebase/firebase.js"></script>
+
+<!-- //Application Scripts// -->
+  <script src="app/app.js"></script>
+
+<!-- //Factories// -->
+  <script src="/app/factories/AuthFactory.js"></script>
+  <script src="/app/factories/DataFactory.js"></script>
+
+<!-- //Values// -->
+  <script src="/app/values/FirebaseCreds.js"></script>
+
+<!-- //Controllers// -->
+  <script src="/app/controllers/splashCtrl.js"></script>
+  <script src="/app/controllers/benefitsCtrl.js"></script>
+  <script src="/app/controllers/createJuiceCtrl.js"></script>
+  <script src="/app/controllers/myRecipesFavoritesCtrl.js"></script>
+  <script src="/app/controllers/navbarCtrl.js"></script>
+  <script src="/app/controllers/recipesCtrl.js"></script>
+
 </body>
 </html>
