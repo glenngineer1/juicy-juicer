@@ -3,10 +3,6 @@
 app.controller("navbarCtrl", function($scope) {
   $scope.navItems = [
     {
-      name: "Home",
-      url: "#/"
-    },
-    {
       name: "Benefits",
       url: "#/benefits"
     },
