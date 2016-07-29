@@ -20,25 +20,30 @@
 
       <div class="login-email">
         <label for="email">Email:</label>
-        <input type="email" placeholder="Enter email here" />
+        <input type="email" ng-model="email" placeholder="Enter email here" />
       </div>
 
       <div class="register-button">
-        <button>Register</button>
+        <button ng-click="register()">Register</button>
       </div>
 
     <div>
 
       <div class="login-password">
         <label for="password">Password:</label>
-        <input type="password" placeholder="Enter Password" />
+        <input type="password" ng-model="password" placeholder="Enter Password" />
       </div>
 
       <div class="login-button">
-        <button>Login</button>
+        <button ng-click="login()">Login</button>
+      </div>
+
+      <div class="logout-button">
+        <button ng-click="logout()">Logout</button>
       </div>
 
     </div>
+
 
   </div>
 

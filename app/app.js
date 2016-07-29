@@ -1,14 +1,14 @@
-"use strict";
+  "use strict";
 
 var app = angular.module("JuicyJuicerApp", ['ngRoute'])
 .constant('FirebaseURL', "https://juicy-juicer.firebaseio.com/");
 
 app.config(function($routeProvider, FBCreds) {
-  let authConfig = {
-    apiKey: FBCreds.apiKey,
-    authDomain: FBCreds.authDomain
-  };
-  firebase.initializeApp(authConfig);
+//   let authConfig = {
+//     apiKey: FBCreds.apiKey,
+//     authDomain: FBCreds.authDomain
+//   };
+//   firebase.initializeApp(authConfig);
 
   $routeProvider.
     when('/', {

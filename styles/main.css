@@ -26,6 +26,9 @@
 .register-button {
   display: inline-block; }
 
+.logout-button {
+  display: inline-block; }
+
 .recipe-card {
   border: solid black 2px;
   width: 27%;
