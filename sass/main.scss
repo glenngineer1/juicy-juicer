@@ -1,8 +1,15 @@
 //Navigation Bar Styling//
 
+.logo-design  {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+}
+
 .nav-links {
   list-style-type: none;
   display: inline-block;
+  width: 10%
 }
 
 .logo {
@@ -13,7 +20,11 @@
   display: inline-block;
 }
 
-.login-text {
+.login-email {
+  display: inline-block;
+}
+
+.login-password {
   display: inline-block;
 }
 
@@ -37,8 +48,16 @@
   border: solid black 2px;
 }
 
+.fruit-checkbox {
+  list-style-type: none;
+}
+
 .vegetable-list {
   border: solid black 2px;
+}
+
+.vegetable-checkbox {
+  list-style-type: none;
 }
 
 .ingredient-list {
