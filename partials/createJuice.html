@@ -5,23 +5,16 @@
     <h3>Click boxes to select or de-select ingredients</h3>
 
   <!-- //Available Fruit List// -->
-    <div class="fruit-list">
-      <div>
-        Available Fruits:
-      </div>
-
-      <div>
-        <ul class="fruit-checkbox">
-          <li>fruit <input type="checkbox" /></li>
-          <li>fruit <input type="checkbox" /></li>
-          <li>fruit <input type="checkbox" /></li>
-          <li>fruit <input type="checkbox" /></li>
-        </ul>
-      </div>
+    <div ng-repeat="savedFruit in fruits">
+      <div class="fruit-name">{{savedFruit.name}}</div>
     </div>
 
   <!-- //Available Vegetable List// -->
-    <div class="vegetable-list">
+    <div ng-repeat="savedVeggie in veggies">
+      <div class="veggie-name">{{savedVeggie.name}}</div>
+    </div>
+
+ <!--    <div class="vegetable-list">
       <div>
         Available Vegetables:
       </div>
@@ -34,10 +27,10 @@
           <li>vegetable <input type="checkbox" /></li>
         </ul>
       </div>
-    </div>
+    </div> -->
 
   <!-- //Recipe Build Area// -->
-    <div class="build-recipe-card">
+ <!--    <div class="build-recipe-card">
       <div class="ingredient-list">
 
         <div class="ingredients">
@@ -57,10 +50,10 @@
           </div>
         </div>
 
-      </div>
+      </div> -->
 
   <!-- //Submit button to create color of juice// -->
-      <div class="submit-for-color">
+<!--       <div class="submit-for-color">
         <button>Click for color of drink</button>
       </div>
 
@@ -69,7 +62,7 @@
           Color Swatch - TBD
         </div>
       </div>
-
+ -->
       <div class="name-drink">
         <label for="name of drink">Name your juice:</label>
         <input type="text" placeholder="enter name of drink" />
