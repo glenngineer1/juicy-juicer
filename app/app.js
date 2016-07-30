@@ -28,8 +28,8 @@ app.config(function($routeProvider, FBCreds) {
       controller: 'createJuiceCtrl'
     })
     .when('/favorites', {
-      templateUrl: 'partials/myRecipesFavorites.html',
-      controller: 'myRecipesFavoritesCtrl'
+      templateUrl: 'partials/myFavorites.html',
+      controller: 'myFavoritesCtrl'
     })
     .otherwise('/');
 });
