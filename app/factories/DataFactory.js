@@ -87,7 +87,7 @@ app.factory("DataFactory", function(FirebaseURL, $q, $http) {
     });
   };
 
-  let deleteFavorite = function(itemId) {
+  let deleteFavorite = function(favoriteId) {
     return $q(function(resolve, reject) {
       $http.delete(
         `${FirebaseURL}/favorites/${favoriteId}.json`
@@ -112,6 +112,6 @@ app.factory("DataFactory", function(FirebaseURL, $q, $http) {
     });
   };
 
-  return {getFavoriteList, getVeggieList, getVeggieList, getFavoriteList, addToFavorites, deleteFavorite, editFavorite}
+  return {getFruitList, getVeggieList, getRecipeList, getFavoriteList, addToFavorites, deleteFavorite, editFavorite};
 
 });
