@@ -15,7 +15,7 @@ app.controller("navbarCtrl", function($scope, $route, AuthFactory) {
       url: "#/create"
     },
     {
-      name: "My Recipes/Favorites",
+      name: "My Favorites",
       url: "#/favorites"
     },
   ];

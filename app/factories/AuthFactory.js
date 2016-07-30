@@ -40,7 +40,7 @@ app.factory("AuthFactory", function() {
 
   return {
     isAuthenticated: isAuthenticated, getUser: getUser, setUser: setUser, register: register, login: login
-    }
+    };
 });
 
 app.run(["$location", "FBCreds", "AuthFactory", function ($location, FBCreds, AuthFactory) {

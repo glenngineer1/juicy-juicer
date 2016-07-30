@@ -1,18 +1,20 @@
 <nav ng-controller="navbarCtrl">
 
-  <div>
+  <div class="navbar">
 
     <div class="logo">
       <div>
+        <!-- <h1>Juicy Juicer</h1> -->
         <a ng-href="#/{{hash}}" title=""><img class="logo-design" src="images/jjnew.png" alt="juicy juicer"></a>
       </div>
     </div>
 
 <!-- //Links to other views that iterate thru navItems in navbarCtrl.js// -->
-
-    <ul ng-repeat="items in navItems" class="nav-links" >
-      <li><a href="{{items.url}}">{{items.name}}</a></li>
-    </ul>
+    <div class="links-div">
+      <ul ng-repeat="items in navItems" class="nav-links" >
+        <li><a href="{{items.url}}">{{items.name}}</a></li>
+      </ul>
+    </div>
 
 <!-- //place to put user login// -->
 
@@ -37,7 +39,6 @@
       <div class="login-button">
         <button ng-click="login()">Login</button>
       </div>
-
       <div class="logout-button">
         <button ng-click="logout()">Logout</button>
       </div>
