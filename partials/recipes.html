@@ -8,9 +8,10 @@
     <input type="text" placeholder="search your favorites">
   </div>
 
-<!-- //Trying to inject recipes from firebase in this div// -->
+<!-- //Injected recipes from firebase in to this div// -->
   <div ng-repeat="savedRecipe in recipes">
     <div class="recipe-name">{{savedRecipe.recipeName}}</div>
+
     <div class="recipe-ingredient">{{savedRecipe.ingredient1}}</div>
     <div class="recipe-amount">{{savedRecipe.amount1}}</div>
     <div class="recipe-ingredient">{{savedRecipe.ingredient2}}</div>
@@ -31,7 +32,9 @@
     <div class="recipe-amount">{{savedRecipe.amount9}}</div>
     <div class="recipe-ingredient">{{savedRecipe.ingredient10}}</div>
     <div class="recipe-amount">{{savedRecipe.amount10}}</div>
-    <div class="recipe-description">{{savedRecipe.description}}</div>
+
+    <div class="recipe-description">Description: {{savedRecipe.description}}</div>
+
     <div class="add-to-favorites">
       <button>Add to favorites</button>
     </div>
