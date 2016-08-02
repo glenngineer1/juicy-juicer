@@ -1,47 +1,43 @@
 <div>
   <div class="recipes">
 
-  <h1>Juicy Juicer Recipes</h1>
+    <h1>Juicy Juicer Recipes</h1>
 
 <!-- //Search by filter in recipes// -->
-  <div class="search-filter">
-    <input type="text" placeholder="search your favorites">
-  </div>
+    <div class="search-filter">
+      <input type="text" placeholder="search your favorites">
+    </div>
 
 <!-- //Injected recipes from firebase in to this div// -->
-  <div ng-repeat="savedRecipe in recipes">
-    <div class="recipe-name">{{savedRecipe.recipeName}}</div>
 
-    <div class="recipe-ingredient">{{savedRecipe.ingredient1}}</div>
-    <div class="recipe-amount">{{savedRecipe.amount1}}</div>
-    <div class="recipe-ingredient">{{savedRecipe.ingredient2}}</div>
-    <div class="recipe-amount">{{savedRecipe.amount2}}</div>
-    <div class="recipe-ingredient">{{savedRecipe.ingredient3}}</div>
-    <div class="recipe-amount">{{savedRecipe.amount3}}</div>
-    <div class="recipe-ingredient">{{savedRecipe.ingredient4}}</div>
-    <div class="recipe-amount">{{savedRecipe.amount4}}</div>
-    <div class="recipe-ingredient">{{savedRecipe.ingredient5}}</div>
-    <div class="recipe-amount">{{savedRecipe.amount5}}</div>
-    <div class="recipe-ingredient">{{savedRecipe.ingredient6}}</div>
-    <div class="recipe-amount">{{savedRecipe.amount6}}</div>
-    <div class="recipe-ingredient">{{savedRecipe.ingredient7}}</div>
-    <div class="recipe-amount">{{savedRecipe.amount7}}</div>
-    <div class="recipe-ingredient">{{savedRecipe.ingredient8}}</div>
-    <div class="recipe-amount">{{savedRecipe.amount8}}</div>
-    <div class="recipe-ingredient">{{savedRecipe.ingredient9}}</div>
-    <div class="recipe-amount">{{savedRecipe.amount9}}</div>
-    <div class="recipe-ingredient">{{savedRecipe.ingredient10}}</div>
-    <div class="recipe-amount">{{savedRecipe.amount10}}</div>
+    <div ng-repeat="savedRecipe in recipes">
+      <div class="recipe-name">
+        <div>{{savedRecipe.recipeName}}</div>
 
-    <div class="recipe-description">Description: {{savedRecipe.description}}</div>
+        <div class="recipe-ingredient-name">{{savedRecipe.ingredient1.name}}</div>
+        <div class="recipe-ingredient-amount">{{savedRecipe.ingredient1.ounces}}</div>
+        <div class="recipe-ingredient-name">{{savedRecipe.ingredient2.name}}</div>
+        <div class="recipe-ingredient-amount">{{savedRecipe.ingredient2.ounces}}</div>
+        <div class="recipe-ingredient-name">{{savedRecipe.ingredient3.name}}</div>
+        <div class="recipe-ingredient-amount">{{savedRecipe.ingredient3.ounces}}</div>
+        <div class="recipe-ingredient-name">{{savedRecipe.ingredient4.name}}</div>
+        <div class="recipe-ingredient-amount">{{savedRecipe.ingredient4.ounces}}</div>
+        <div class="recipe-ingredient-name">{{savedRecipe.ingredient5.name}}</div>
+        <div class="recipe-ingredient-amount">{{savedRecipe.ingredient5.ounces}}</div>
+        <div class="recipe-ingredient-name">{{savedRecipe.ingredient6.name}}</div>
+        <div class="recipe-ingredient-amount">{{savedRecipe.ingredient6.ounces}}</div>
+        <div class="recipe-ingredient-name">{{savedRecipe.ingredient7.name}}</div>
+        <div class="recipe-ingredient-amount">{{savedRecipe.ingredient7.ounces}}</div>
+        <div class="recipe-ingredient-name">{{savedRecipe.ingredient8.name}}</div>
+        <div class="recipe-ingredient-amount">{{savedRecipe.ingredient8.ounces}}</div>
 
-    <div class="add-to-favorites">
-      <button>Add to favorites</button>
+        <div class="recipe-description">Description: {{savedRecipe.description}}</div>
+
+        <div class="add-to-favorites">
+          <button>Add to favorites</button>
+        </div>
+
+      </div>
     </div>
-  </div>
-
-
-    </div>
-
   </div>
 </div>

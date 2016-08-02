@@ -20,11 +20,11 @@ app.controller("navbarCtrl", function($scope, $route, AuthFactory) {
     },
   ];
 
-    $scope.register = function () {
+  $scope.register = function () {
     AuthFactory.register($scope.email, $scope.password)
     .then(function(result) {
-      // var user = result.uid;
-      console.log("logged in user", result.uid);
+      var userRegister = result.uid;
+      console.log("register user", userRegister);
     })
     .catch(function(err) {
       console.log(error);
@@ -34,10 +34,21 @@ app.controller("navbarCtrl", function($scope, $route, AuthFactory) {
   $scope.login = function () {
     AuthFactory.login($scope.email, $scope.password)
     .then(function(result) {
-      console.log("logged in", result);
+      // console.log(result);
+      var userLogin = result.uid;
+      console.log("log in user", userLogin);
     })
     .catch(function(err) {
       console.log(err);
+    });
+  };
+
+  $scope.logout = function() {
+  firebase.auth().signOut().then(function() {
+    // AuthFactory.logout();
+    console.log("user logged out");
+    }, function(error) {
+    // An error happened.
     });
   };
 });
