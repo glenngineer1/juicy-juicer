@@ -56,11 +56,14 @@ app.factory("DataFactory", function(FirebaseURL, $q, $http) {
     });
   };
 
-    let getFavoriteList = function() {
+    let getFavoriteList = function(currentUser) {
+      // console.log("currentUser", favoriteObject);
+      // console.log("favID", favID);
     let favorites = [];
     return $q(function(resolve, reject) {
-      $http.get(`${FirebaseURL}/favorites/.json`)
+      $http.get(`${FirebaseURL}/favorites.json?orderBy="userId"&equalTo="${currentUser}"`)
       .success(function(favoriteObject) {
+        // console.log(currentUser);
         let favoriteCollection = favoriteObject;
         Object.keys(favoriteCollection).forEach(function(key) {
           favoriteCollection[key].id=key;

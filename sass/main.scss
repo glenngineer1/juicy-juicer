@@ -49,19 +49,27 @@
 }
 
 //Recipe HTML Styling//
-.recipe-card {
+.recipe-name {
   border: solid black 2px;
   width: 27%;
   display: inline-block;
 }
 
 //Create Juice HTML Styling//
+.saved-fruit {
+  border: solid black 2px;
+}
+
 .fruit-list {
   border: solid black 2px;
 }
 
 .fruit-checkbox {
   list-style-type: none;
+}
+
+.saved-veggie {
+  border: solid black 2px;
 }
 
 .vegetable-list {

@@ -1,54 +1,49 @@
 <div>
   <div class="my-favorites">
 
-  <h1>My Favorites</h1>
+    <h1>My Favorites</h1>
 
 <!-- //Search by filter in favorite drinks and recipes// -->
-  <div class="search-filter">
-    <input type="text" placeholder="search your favorites">
-  </div>
-
-  <!-- //Div to inject favorites// -->
-  <div ng-repeat="favorite in favorites" class="favorite-card">
-    <div class="recipe-name">{{favorite.recipeName}}</div>
-
-    <div class="color-swatch">
-      Space for color swatch
+    <div class="search-filter">
+      <input type="text" placeholder="search your favorites">
     </div>
 
-    <div class="recipe-ingredient">{{favorite.ingredient1}}</div>
-    <div class="recipe-ingredient">{{favorite.ingredient2}}</div>
-    <div class="recipe-ingredient">{{favorite.ingredient3}}</div>
-    <div class="recipe-ingredient">{{favorite.ingredient4}}</div>
-    <div class="recipe-ingredient">{{favorite.ingredient5}}</div>
-    <div class="recipe-ingredient">{{favorite.ingredient6}}</div>
-    <div class="recipe-ingredient">{{favorite.ingredient7}}</div>
-    <div class="recipe-ingredient">{{favorite.ingredient8}}</div>
-    <div class="recipe-ingredient">{{favorite.ingredient9}}</div>
-    <div class="recipe-ingredient">{{favorite.ingredient10}}</div>
-    <div class="recipe-amount">{{favorite.amount1}}</div>
-    <div class="recipe-amount">{{favorite.amount2}}</div>
-    <div class="recipe-amount">{{favorite.amount3}}</div>
-    <div class="recipe-amount">{{favorite.amount4}}</div>
-    <div class="recipe-amount">{{favorite.amount5}}</div>
-    <div class="recipe-amount">{{favorite.amount6}}</div>
-    <div class="recipe-amount">{{favorite.amount7}}</div>
-    <div class="recipe-amount">{{favorite.amount8}}</div>
-    <div class="recipe-amount">{{favorite.amount9}}</div>
-    <div class="recipe-amount">{{favorite.amount10}}</div>
+    <!-- //Div to inject favorites// -->
+    <div ng-repeat="favorite in favorites" class="favorite-card">
+      <div class="recipe-name">{{favorite.recipeName}}</div>
 
-    <div class="recipe-description">Description: {{favorite.description}}</div>
+      <div class="color-swatch">
+        Space for color swatch
+      </div>
 
-    <div class="edit-favorites">
-      <button>Edit</button>
+      <div class="recipe-ingredient-name">{{favorite.ingredient1.name}}</div>
+      <div class="recipe-ingredient-amount">{{favorite.ingredient1.ounces}}</div>
+      <div class="recipe-ingredient-name">{{favorite.ingredient2.name}}</div>
+      <div class="recipe-ingredient-amount">{{favorite.ingredient2.ounces}}</div>
+      <div class="recipe-ingredient-name">{{favorite.ingredient3.name}}</div>
+      <div class="recipe-ingredient-amount">{{favorite.ingredient3.ounces}}</div>
+      <div class="recipe-ingredient-name">{{favorite.ingredient4.name}}</div>
+      <div class="recipe-ingredient-amount">{{favorite.ingredient4.ounces}}</div>
+      <div class="recipe-ingredient-name">{{favorite.ingredient5.name}}</div>
+      <div class="recipe-ingredient-amount">{{favorite.ingredient5.ounces}}</div>
+      <div class="recipe-ingredient-name">{{favorite.ingredient6.name}}</div>
+      <div class="recipe-ingredient-amount">{{favorite.ingredient6.ounces}}</div>
+      <div class="recipe-ingredient-name">{{favorite.ingredient7.name}}</div>
+      <div class="recipe-ingredient-amount">{{favorite.ingredient7.ounces}}</div>
+      <div class="recipe-ingredient-name">{{favorite.ingredient8.name}}</div>
+      <div class="recipe-ingredient-amount">{{favorite.ingredient8.ounces}}</div>
+
+      <div class="recipe-description">Description: {{favorite.description}}</div>
+
+      <div class="edit-favorites">
+        <button>Edit</button>
+      </div>
+
+      <div class="delete-favorites">
+        <button>Delete</button>
+      </div>
+
     </div>
-
-    <div class="delete-favorites">
-      <button>Delete</button>
-    </div>
-
-  </div>
-
 
   </div>
 </div>

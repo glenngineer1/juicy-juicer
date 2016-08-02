@@ -3,6 +3,7 @@
 app.factory("AuthFactory", function() {
 
   let currentUserId = null;
+  console.log("CUID", currentUserId);
 
   let isAuthenticated = function() {
     return (currentUserId) ? true : false;
@@ -10,11 +11,16 @@ app.factory("AuthFactory", function() {
 
   let getUser = function() {
     return currentUserId;
+  // console.log("getUser", getUser);
   };
 
   let setUser = function(id) {
     currentUserId = id;
-    // console.log(currentUserId, "currentUserId")
+    // console.log("CUID", currentUserId);
+  };
+
+  let logout = function() {
+    currentUserId = null;
   };
 
   let register = function (email, password) {
@@ -39,7 +45,7 @@ app.factory("AuthFactory", function() {
   };
 
   return {
-    isAuthenticated: isAuthenticated, getUser: getUser, setUser: setUser, register: register, login: login
+    isAuthenticated, getUser, setUser, register, login
     };
 });
 
@@ -52,12 +58,14 @@ app.run(["$location", "FBCreds", "AuthFactory", function ($location, FBCreds, Au
   firebase.initializeApp(authConfig);
 
   firebase.auth().onAuthStateChanged(function (user) {
+    // console.log(user.uid);
     if (user) {
-      authFactory.setUser(user.uid);
+      AuthFactory.setUser(user.uid);
       $location.url("/");
+      // console.log('HELLO');
     } else {
       $location.url("/");
-      authFactory.setUser(null); //this is to rest the current user to hide board.
+      AuthFactory.setUser(null); //this is to rest the current user to hide board.
     }
   });
 }]);
