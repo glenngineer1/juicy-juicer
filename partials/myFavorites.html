@@ -16,22 +16,12 @@
         Space for color swatch
       </div>
 
-      <div class="recipe-ingredient-name">{{favorite.ingredient1.name}}</div>
-      <div class="recipe-ingredient-amount">{{favorite.ingredient1.ounces}}</div>
-      <div class="recipe-ingredient-name">{{favorite.ingredient2.name}}</div>
-      <div class="recipe-ingredient-amount">{{favorite.ingredient2.ounces}}</div>
-      <div class="recipe-ingredient-name">{{favorite.ingredient3.name}}</div>
-      <div class="recipe-ingredient-amount">{{favorite.ingredient3.ounces}}</div>
-      <div class="recipe-ingredient-name">{{favorite.ingredient4.name}}</div>
-      <div class="recipe-ingredient-amount">{{favorite.ingredient4.ounces}}</div>
-      <div class="recipe-ingredient-name">{{favorite.ingredient5.name}}</div>
-      <div class="recipe-ingredient-amount">{{favorite.ingredient5.ounces}}</div>
-      <div class="recipe-ingredient-name">{{favorite.ingredient6.name}}</div>
-      <div class="recipe-ingredient-amount">{{favorite.ingredient6.ounces}}</div>
-      <div class="recipe-ingredient-name">{{favorite.ingredient7.name}}</div>
-      <div class="recipe-ingredient-amount">{{favorite.ingredient7.ounces}}</div>
-      <div class="recipe-ingredient-name">{{favorite.ingredient8.name}}</div>
-      <div class="recipe-ingredient-amount">{{favorite.ingredient8.ounces}}</div>
+      <div ng-repeat="favorite in favorites">
+        <div ng-repeat="ingredients in favorite.ingredient">
+          <div class="recipe-ingredient-name">{{ingredients.name}}</div>
+          <div class="recipe-ingredient-amount">{{ingredients.ounces}}</div>
+        </div>
+      </div>
 
       <div class="recipe-description">Description: {{favorite.description}}</div>
 
