@@ -26,12 +26,12 @@ app.controller("createJuiceCtrl", function($scope, DataFactory, AuthFactory, $lo
     else {
       $scope.selection.push(ingredientName);
     }
-    console.log("selected ingredients", $scope.selection);
+    // console.log("selected ingredients", $scope.selection);
   };
 
   $scope.createNewRecipe = function() {
     $scope.newRecipe.userId = AuthFactory.getUser();
-    console.log("userID", $scope.newRecipe.userId);
+    // console.log("userID", $scope.newRecipe.userId);
     DataFactory.addToFavorites($scope.newRecipe)
     .then(function(response) {
       $location.url('/favorites');
