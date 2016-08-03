@@ -4,39 +4,7 @@ app.controller("createJuiceCtrl", function($scope, DataFactory, AuthFactory, $lo
   $scope.newRecipe = {
     recipeName: "",
     description: "",
-    userId: "",
-    ingredient1: {
-      name: "",
-      ounces: ""
-    },
-    ingredient2: {
-      name: "",
-      ounces: ""
-    },
-    ingredient3: {
-      name: "",
-      ounces: ""
-    },
-    ingredient4: {
-      name: "",
-      ounces: ""
-    },
-    ingredient5: {
-      name: "",
-      ounces: ""
-    },
-    ingredient6: {
-      name: "",
-      ounces: ""
-    },
-    ingredient7: {
-      name: "",
-      ounces: ""
-    },
-    ingredient8: {
-      name: "",
-      ounces: ""
-    }
+    userId: ""
   };
 
   DataFactory.getFruitList()
