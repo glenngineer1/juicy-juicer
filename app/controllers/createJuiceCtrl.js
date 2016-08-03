@@ -44,23 +44,22 @@ app.controller("createJuiceCtrl", function($scope, DataFactory, AuthFactory, $lo
     $scope.fruits = fruitCollection;
     });
 
-  // $scope.fruits = ['apple', 'apricot', 'banana', 'blackberry', 'blueberry', 'cherry', 'cranberry', 'grape', 'grapefruit', 'guava', 'kiwi', 'lemon', 'lime', 'mango', 'orange', 'peach', 'pear', 'pineapple', 'raspberry', 'strawberry'];
-  $scope.selection = [];
-  $scope.toggleSelection = function toggleSelection(fruitName) {
-    var idx = $scope.selection.indexOf(fruitName);
-    if (idx > -1) {
-      $scope.selection.splice(idx, 1);
-    }
-    else {
-      $scope.selection.push(fruitName);
-    }
-    console.log("SS", $scope.selection);
-  };
-
   DataFactory.getVeggieList()
   .then(function(veggieCollection) {
     $scope.veggies = veggieCollection;
   });
+
+  $scope.selection = [];
+  $scope.toggleSelection = function toggleSelection(ingredientName) {
+    var idx = $scope.selection.indexOf(ingredientName);
+    if (idx > -1) {
+      $scope.selection.splice(idx, 1);
+    }
+    else {
+      $scope.selection.push(ingredientName);
+    }
+    console.log("selected ingredients", $scope.selection);
+  };
 
   $scope.createNewRecipe = function() {
     $scope.newRecipe.userId = AuthFactory.getUser();
