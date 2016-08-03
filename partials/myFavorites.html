@@ -16,11 +16,9 @@
         Space for color swatch
       </div>
 
-      <div ng-repeat="favorite in favorites">
-        <div ng-repeat="ingredients in favorite.ingredient">
-          <div class="recipe-ingredient-name">{{ingredients.name}}</div>
-          <div class="recipe-ingredient-amount">{{ingredients.ounces}}</div>
-        </div>
+      <div ng-repeat="ingredient in favorite.ingredient">
+        <div class="recipe-ingredient-name">{{ingredient.name}}</div>
+        <div class="recipe-ingredient-amount">{{ingredient.ounces}}</div>
       </div>
 
       <div class="recipe-description">Description: {{favorite.description}}</div>
@@ -30,7 +28,7 @@
       </div>
 
       <div class="delete-favorites">
-        <button>Delete</button>
+        <button ng-click="deleteFavorite(favorite.id)">Delete</button>
       </div>
 
     </div>

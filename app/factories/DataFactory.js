@@ -91,6 +91,7 @@ app.factory("DataFactory", function(FirebaseURL, $q, $http) {
   };
 
   let deleteFavorite = function(favoriteId) {
+    console.log("delete?");
     return $q(function(resolve, reject) {
       $http.delete(
         `${FirebaseURL}/favorites/${favoriteId}.json`
