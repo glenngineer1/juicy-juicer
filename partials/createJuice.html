@@ -6,9 +6,15 @@
 
   <!-- //Available Fruit List// -->
   <div class="saved-fruit">
-    <div ng-repeat="savedFruit in fruits">
-      <div class="fruit-name">{{savedFruit.name}}<input class="fruit-name-checkbox" type="checkbox"></div>
-    </div>
+    <label ng-repeat="fruitName in fruits">
+      <input class="fruit-name-checkbox"
+        type="checkbox"
+        name="selectedFruits[]"
+        value="{{fruitName}}"
+        ng-checked="selection.indexOf(fruitName) > -1"
+        ng-click="toggleSelection(fruitName)"
+       > {{fruitName.name}}
+    </label>
   </div>
 
   <!-- //Available Vegetable List// -->

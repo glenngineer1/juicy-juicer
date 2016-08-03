@@ -19,6 +19,7 @@
     "angular-route": "^1.5.8",
     "jquery": "^3.1.0",
     "angularfire": "^2.0.1",
-    "materialize": "^0.97.7"
+    "materialize": "^0.97.7",
+    "checklist-model-bm": "^0.1.4"
   }
 }
