@@ -8,7 +8,7 @@ app.controller("myFavoritesCtrl", function($scope, DataFactory, AuthFactory, $ro
   .then(function(favoriteCollection) {
     $scope.favorites = favoriteCollection;
     $scope.userId = AuthFactory.getUser();
-    console.log("fc", $scope.favorites);
+    // console.log("fc", $scope.favorites);
   });
 
   $scope.deleteFavorite = function(itemId) {
@@ -17,5 +17,9 @@ app.controller("myFavoritesCtrl", function($scope, DataFactory, AuthFactory, $ro
       $route.reload();
     });
   };
+
+  $scope.editFavorite = function(itemId) {
+    DataFactory.editFavorite(itemId)
     // console.log("favoriteID", favID);
+  }
 });

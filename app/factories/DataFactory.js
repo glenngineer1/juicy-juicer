@@ -79,8 +79,8 @@ app.factory("DataFactory", function(FirebaseURL, $q, $http) {
 
   let addToFavorites = function(newFavorite) {
     return $q(function(resolve, reject) {
-      $http.post(`${FirebaseURL}/favorites/.json`,
-        JSON.stringify(newFavorite))
+      $http.post(`${FirebaseURL}/favorites/.json`, newFavorite)
+        // JSON.stringify(newFavorite)
       .success(function(ObjFromFirebase) {
         resolve(ObjFromFirebase);
       })
@@ -104,9 +104,9 @@ app.factory("DataFactory", function(FirebaseURL, $q, $http) {
     });
   };
 
-  let editFavorite = function(favorite) {
+  let editFavorite = function(favoriteId) {
     return $q(function(resolve, reject) {
-      $http.put(`${FirebaseURL}/favorites/${favorite.id}.json`, favorite)
+      $http.put(`${FirebaseURL}/favorites/${favoriteId.id}.json`, favoriteId)
       .success(function(ObjFromFirebase) {
         resolve(ObjFromFirebase);
       })

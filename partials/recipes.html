@@ -13,11 +13,12 @@
     <div ng-repeat="savedRecipe in recipes">
       <div class="recipe-name">
         <div>{{savedRecipe.recipeName}}</div>
-
-        <div class="recipe-ingredient-name">{{savedRecipe.ingredient1.name}}</div>
-        <div class="recipe-ingredient-amount">{{savedRecipe.ingredient1.ounces}}</div>
-        <div class="recipe-ingredient-name">{{savedRecipe.ingredient2.name}}</div>
-        <div class="recipe-ingredient-amount">{{savedRecipe.ingredient2.ounces}}</div>
+            <div ng-repeat="ingredient in savedRecipe.ingredient">
+                <div class="recipe-ingredient-name">{{ingredient.name}}</div>
+                <div class="recipe-ingredient-amount">{{ingredient.ounces}}</div>
+            </div>
+       <!--  <div class="recipe-ingredient-name">{{savedRecipe.ingredient2.name}}</div>
+ -->        <!-- <div class="recipe-ingredient-amount">{{savedRecipe.ingredient2.ounces}}</div>
         <div class="recipe-ingredient-name">{{savedRecipe.ingredient3.name}}</div>
         <div class="recipe-ingredient-amount">{{savedRecipe.ingredient3.ounces}}</div>
         <div class="recipe-ingredient-name">{{savedRecipe.ingredient4.name}}</div>
@@ -29,12 +30,12 @@
         <div class="recipe-ingredient-name">{{savedRecipe.ingredient7.name}}</div>
         <div class="recipe-ingredient-amount">{{savedRecipe.ingredient7.ounces}}</div>
         <div class="recipe-ingredient-name">{{savedRecipe.ingredient8.name}}</div>
-        <div class="recipe-ingredient-amount">{{savedRecipe.ingredient8.ounces}}</div>
+        <div class="recipe-ingredient-amount">{{savedRecipe.ingredient8.ounces}}</div> -->
 
         <div class="recipe-description">Description: {{savedRecipe.description}}</div>
 
         <div class="add-to-favorites">
-          <button>Add to favorites</button>
+          <button ng-click="createRecipeFavorite($index)">Add to favorites</button>
         </div>
 
       </div>
