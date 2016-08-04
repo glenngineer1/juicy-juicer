@@ -38,7 +38,7 @@ app.factory("DataFactory", function(FirebaseURL, $q, $http) {
     });
   };
 
-   let getRecipeList = function() {
+  let getRecipeList = function() {
     let recipes = [];
     return $q(function(resolve, reject) {
       $http.get(`${FirebaseURL}/recipes/.json`)
@@ -56,7 +56,7 @@ app.factory("DataFactory", function(FirebaseURL, $q, $http) {
     });
   };
 
-    let getFavoriteList = function(currentUser) {
+  let getFavoriteList = function(currentUser) {
       // console.log("currentUser", favoriteObject);
       // console.log("favID", favID);
     let favorites = [];
@@ -104,9 +104,21 @@ app.factory("DataFactory", function(FirebaseURL, $q, $http) {
     });
   };
 
-  let editFavorite = function(favoriteId) {
+  let getFavorite = function(favoriteId) {
     return $q(function(resolve, reject) {
-      $http.put(`${FirebaseURL}/favorites/${favoriteId.id}.json`, favoriteId)
+      $http.get(`${FirebaseURL}/favorites/${favoriteId}.json`
+      ).success(function(ObjFromFirebase) {
+        resolve(ObjFromFirebase);
+      }).error(function(error) {
+        reject(error);
+      });
+    });
+  };
+
+  let changesToFavorites = function(favoriteId) {
+      // console.log("favId", favoriteId)
+    return $q(function(resolve, reject) {
+      $http.post(`${FirebaseURL}/favorites/${favoriteId}.json`, favoriteId)
       .success(function(ObjFromFirebase) {
         resolve(ObjFromFirebase);
       })
@@ -114,8 +126,8 @@ app.factory("DataFactory", function(FirebaseURL, $q, $http) {
         reject(error);
       });
     });
-  };
+  }
 
-  return {getFruitList, getVeggieList, getRecipeList, getFavoriteList, addToFavorites, deleteFavorite, editFavorite};
+  return {getFruitList, getVeggieList, getRecipeList, getFavoriteList, addToFavorites, deleteFavorite, getFavorite, changesToFavorites};
 
 });

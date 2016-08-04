@@ -31,5 +31,9 @@ app.config(function($routeProvider, FBCreds) {
       templateUrl: 'partials/myFavorites.html',
       controller: 'myFavoritesCtrl'
     })
+    .when('/edit/:itemId', {
+      templateUrl: 'partials/edit.html',
+      controller: 'editCtrl'
+    })
     .otherwise('/');
 });
