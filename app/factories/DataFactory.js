@@ -104,18 +104,32 @@ app.factory("DataFactory", function(FirebaseURL, $q, $http) {
     });
   };
 
-  let editFavorite = function(favoriteId) {
+   let getFavorite = function(favoriteId) {
+    // console.log("favoriteId", favoriteId);
     return $q(function(resolve, reject) {
-      $http.put(`${FirebaseURL}/favorites/${favoriteId.id}.json`, favoriteId)
-      .success(function(ObjFromFirebase) {
+      $http.get(`${FirebaseURL}/favorites/${favoriteId}.json`
+      ).success(function(ObjFromFirebase) {
         resolve(ObjFromFirebase);
-      })
-      .error(function(error) {
+      }).error(function(error) {
         reject(error);
       });
     });
   };
 
-  return {getFruitList, getVeggieList, getRecipeList, getFavoriteList, addToFavorites, deleteFavorite, editFavorite};
+  // let editFavorite = function() {
+    // console.log("ObjFromFirebase", ObjFromFirebase);
+    // return $q(function(resolve, reject) {
+    //   $http.put(`${FirebaseURL}/favorites/${favoriteId}.json`)
+    //   console.log("JSON", favoriteId)
+    //   .success(function(ObjFromFirebase) {
+    //     resolve(ObjFromFirebase);
+    //   })
+    //   .error(function(error) {
+    //     reject(error);
+    //   });
+    // });
+  // };
+
+  return {getFruitList, getVeggieList, getRecipeList, getFavoriteList, addToFavorites, deleteFavorite, getFavorite, editFavorite};
 
 });

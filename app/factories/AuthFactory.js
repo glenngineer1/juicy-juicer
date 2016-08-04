@@ -3,7 +3,7 @@
 app.factory("AuthFactory", function() {
 
   let currentUserId = null;
-  console.log("CUID", currentUserId);
+  // console.log("CUID", currentUserId);
 
   let isAuthenticated = function() {
     return (currentUserId) ? true : false;

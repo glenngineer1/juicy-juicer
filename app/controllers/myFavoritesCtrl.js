@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("myFavoritesCtrl", function($scope, DataFactory, AuthFactory, $route) {
+app.controller("myFavoritesCtrl", function($scope, DataFactory, AuthFactory, $route, $location) {
   var currentUser = AuthFactory.getUser();
   // var favID = "";
   // console.log("CU", currentUser);
@@ -18,8 +18,10 @@ app.controller("myFavoritesCtrl", function($scope, DataFactory, AuthFactory, $ro
     });
   };
 
-  $scope.editFavorite = function(itemId) {
-    DataFactory.editFavorite(itemId)
-    // console.log("favoriteID", favID);
+  $scope.getFavorites = function(itemId) {
+    // console.log("itemId", itemId);
+    DataFactory.getFavorite(itemId).then(function(ObjFromFirebase){
+      console.log("OFF", ObjFromFirebase);
+    })
   }
 });
