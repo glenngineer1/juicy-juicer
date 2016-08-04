@@ -38,7 +38,7 @@ app.factory("DataFactory", function(FirebaseURL, $q, $http) {
     });
   };
 
-   let getRecipeList = function() {
+  let getRecipeList = function() {
     let recipes = [];
     return $q(function(resolve, reject) {
       $http.get(`${FirebaseURL}/recipes/.json`)
@@ -56,7 +56,7 @@ app.factory("DataFactory", function(FirebaseURL, $q, $http) {
     });
   };
 
-    let getFavoriteList = function(currentUser) {
+  let getFavoriteList = function(currentUser) {
       // console.log("currentUser", favoriteObject);
       // console.log("favID", favID);
     let favorites = [];
@@ -104,8 +104,7 @@ app.factory("DataFactory", function(FirebaseURL, $q, $http) {
     });
   };
 
-   let getFavorite = function(favoriteId) {
-    // console.log("favoriteId", favoriteId);
+  let getFavorite = function(favoriteId) {
     return $q(function(resolve, reject) {
       $http.get(`${FirebaseURL}/favorites/${favoriteId}.json`
       ).success(function(ObjFromFirebase) {
@@ -116,20 +115,19 @@ app.factory("DataFactory", function(FirebaseURL, $q, $http) {
     });
   };
 
-  // let editFavorite = function() {
-    // console.log("ObjFromFirebase", ObjFromFirebase);
-    // return $q(function(resolve, reject) {
-    //   $http.put(`${FirebaseURL}/favorites/${favoriteId}.json`)
-    //   console.log("JSON", favoriteId)
-    //   .success(function(ObjFromFirebase) {
-    //     resolve(ObjFromFirebase);
-    //   })
-    //   .error(function(error) {
-    //     reject(error);
-    //   });
-    // });
-  // };
+  let changesToFavorites = function(favoriteId) {
+      // console.log("favId", favoriteId)
+    return $q(function(resolve, reject) {
+      $http.post(`${FirebaseURL}/favorites/${favoriteId}.json`, favoriteId)
+      .success(function(ObjFromFirebase) {
+        resolve(ObjFromFirebase);
+      })
+      .error(function(error) {
+        reject(error);
+      });
+    });
+  }
 
-  return {getFruitList, getVeggieList, getRecipeList, getFavoriteList, addToFavorites, deleteFavorite, getFavorite, editFavorite};
+  return {getFruitList, getVeggieList, getRecipeList, getFavoriteList, addToFavorites, deleteFavorite, getFavorite, changesToFavorites};
 
 });

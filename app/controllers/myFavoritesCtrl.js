@@ -2,7 +2,6 @@
 
 app.controller("myFavoritesCtrl", function($scope, DataFactory, AuthFactory, $route, $location) {
   var currentUser = AuthFactory.getUser();
-  // var favID = "";
   // console.log("CU", currentUser);
   DataFactory.getFavoriteList(currentUser)
   .then(function(favoriteCollection) {
@@ -18,10 +17,11 @@ app.controller("myFavoritesCtrl", function($scope, DataFactory, AuthFactory, $ro
     });
   };
 
-  $scope.getFavorites = function(itemId) {
-    // console.log("itemId", itemId);
-    DataFactory.getFavorite(itemId).then(function(ObjFromFirebase){
-      console.log("OFF", ObjFromFirebase);
-    })
-  }
+  $scope.getFavorite = function(itemId) {
+    $location.url(`/edit/${itemId}`);
+  };
+
+  $scope.changesToFavorites = function(itemId) {
+    console.log("hi", itemId);
+  };
 });
