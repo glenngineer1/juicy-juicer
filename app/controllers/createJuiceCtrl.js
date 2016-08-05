@@ -4,7 +4,8 @@ app.controller("createJuiceCtrl", function($scope, DataFactory, AuthFactory, $lo
   $scope.newRecipe = {
     recipeName: "",
     description: "",
-    userId: ""
+    userId: "",
+    id: ""
   };
 
   DataFactory.getFruitList()
@@ -16,6 +17,12 @@ app.controller("createJuiceCtrl", function($scope, DataFactory, AuthFactory, $lo
   .then(function(veggieCollection) {
     $scope.veggies = veggieCollection;
   });
+
+  // DataFactory.getFavorite()
+  // .then(function(favorite) {
+  //   console.log("FC", favorite);
+  //   $scope.favorites = favorite
+  // });
 
   $scope.selection = [];
   $scope.toggleSelection = function toggleSelection(ingredientName) {
@@ -31,7 +38,6 @@ app.controller("createJuiceCtrl", function($scope, DataFactory, AuthFactory, $lo
 
   $scope.createNewRecipe = function() {
     $scope.newRecipe.userId = AuthFactory.getUser();
-    // console.log("userID", $scope.newRecipe.userId);
     DataFactory.addToFavorites($scope.newRecipe)
     .then(function(response) {
       $location.url('/favorites');

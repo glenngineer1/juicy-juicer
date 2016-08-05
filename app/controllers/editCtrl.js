@@ -2,7 +2,7 @@
 
 app.controller("editCtrl", function($scope, DataFactory, $location, $routeParams) {
   $scope.editedRecipe = {
-
+    id: ""
   };
 
 // console.log("routeParams", $routeParams.itemId);
@@ -19,8 +19,9 @@ app.controller("editCtrl", function($scope, DataFactory, $location, $routeParams
   DataFactory.getFavorite($routeParams.itemId)
   .then(function(singleFavorite) {
     $scope.single = singleFavorite;
+    $scope.single.id = $routeParams.itemId;
     // console.log("singleFavorite", singleFavorite);
-  })
+  });
 
   $scope.selection = [];
   $scope.toggleSelection = function toggleSelection(ingredientName) {
@@ -35,8 +36,9 @@ app.controller("editCtrl", function($scope, DataFactory, $location, $routeParams
   };
 
   $scope.saveChanges = function(itemId) {
+    console.log("itemId", itemId);
     console.log("scope.single", $scope.single);
-    DataFactory.changesToFavorites($scope.editedRecipe)
+    DataFactory.changesToFavorite($scope.single)
     .then(function(response) {
       $location.url('/favorites');
     });

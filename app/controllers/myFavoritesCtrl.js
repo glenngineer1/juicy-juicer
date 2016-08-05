@@ -18,10 +18,7 @@ app.controller("myFavoritesCtrl", function($scope, DataFactory, AuthFactory, $ro
   };
 
   $scope.getFavorite = function(itemId) {
+    // console.log("itemIdFAVORITES", itemId);
     $location.url(`/edit/${itemId}`);
-  };
-
-  $scope.changesToFavorites = function(itemId) {
-    console.log("hi", itemId);
   };
 });
