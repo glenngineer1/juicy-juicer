@@ -20,7 +20,7 @@ app.controller("editCtrl", function($scope, DataFactory, $location, $routeParams
   .then(function(singleFavorite) {
     $scope.single = singleFavorite;
     $scope.single.id = $routeParams.itemId;
-    console.log("singleFavorite", singleFavorite.ingredient);
+    // console.log("singleFavorite", singleFavorite.ingredient);
     $scope.selection.push(singleFavorite);
   });
 
