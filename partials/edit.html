@@ -2,10 +2,10 @@
   <div class="create-juice">
 
     <h1 class="recipe-header">Modify Your Juice</h1>
-    <h2>Click boxes to select or de-select ingredients</h2>
+    <!-- <h2>Click boxes to select or de-select ingredients</h2> -->
 
   <!-- //Available Fruit List// -->
-  <div class="saved-fruit">
+<!--   <div class="saved-fruit">
     <div ng-repeat="fruitName in fruits" class="fruit-name-checkbox">
       {{fruitName.name}}
       <input
@@ -16,10 +16,10 @@
         ng-checked="selection.indexOf(fruitName) > -1"
         ng-click="toggleSelection(fruitName)">
     </div>
-  </div>
+  </div> -->
 
   <!-- //Available Vegetable List// -->
-  <div class="saved-veggie">
+ <!--  <div class="saved-veggie">
     <div ng-repeat="veggieName in veggies" class="veggie-name-checkbox">
       {{veggieName.name}}
       <input
@@ -30,14 +30,14 @@
         ng-checked="selection.indexOf(veggieName) > -1"
         ng-click="toggleSelection(veggieName)">
     </div>
-  </div>
+  </div> -->
 
   <!-- //Place where checked ingredients show up with a blank input for the amount of ounces each ingredient will use// -->
   <div>
   <h2>Ingredient List</h2>
     <div ng-repeat="ingredients in single.ingredient">
       <ul>
-        <li class="ingredient-list" ng-init="ingredients.name">{{ingredients.name}} <input type="input" placeholder="enter number of ounces" ng-model="ingredients.ounces"></input></li>
+        <li class="ingredient-list" ng-init="ingredients.name">{{ingredients.name}} <input type="input" placeholder="Number of ounces" ng-model="ingredients.ounces"></input></li>
       </ul>
     </div>
   </div>
