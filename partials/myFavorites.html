@@ -1,7 +1,7 @@
 <div>
   <div class="my-favorites">
 
-    <h1>My Favorites</h1>
+    <h1 class="recipe-header">My Favorites</h1>
 
 <!-- //Search by filter in favorite drinks and recipes// -->
     <div class="search-filter">
@@ -9,17 +9,21 @@
     </div>
 
     <!-- //Div to inject favorites// -->
-    <div ng-repeat="favorite in favorites" class="favorite-card">
+    <div ng-repeat="favorite in favorites" class="savedRecipeCard">
       <div class="recipe-name">{{favorite.recipeName}}</div>
+      <div class="ingredient">Ingredients</div>
+      <div class="ounces">Ounces</div>
+        <div class="ingredient-ounces">
 
-      <div class="color-swatch">
+<!--       <div class="color-swatch">
         Space for color swatch
-      </div>
+      </div> -->
 
-      <div ng-repeat="ingredient in favorite.ingredient">
-        <div class="recipe-ingredient-name">{{ingredient.name}}</div>
-        <div class="recipe-ingredient-amount">{{ingredient.ounces}}</div>
-      </div>
+          <div ng-repeat="ingredient in favorite.ingredient">
+            <div class="recipe-ingredient-name">{{ingredient.name}}</div>
+            <div class="recipe-ingredient-amount">{{ingredient.ounces}}</div>
+          </div>
+        </div>
 
       <div class="recipe-description">Description: {{favorite.description}}</div>
 
