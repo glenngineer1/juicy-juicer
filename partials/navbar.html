@@ -1,11 +1,11 @@
 <nav ng-controller="navbarCtrl">
 
-  <div class="navbar">
+  <div class="navbar fixed-navbar">
 
     <div class="logo">
       <div>
-        <!-- <h1>Juicy Juicer</h1> -->
-        <a ng-href="#/{{hash}}" title=""><img class="logo-design" src="images/jjnew.png" alt="juicy juicer"></a>
+        <h1><a  class="logo-design" ng-href="#/{{hash}}">Juicy Juicer</a></h1>
+        <!-- <a ng-href="#/{{hash}}" title=""><img class="logo-design" src="images/jjnew.png" alt="juicy juicer"></a> -->
       </div>
     </div>
 
@@ -39,6 +39,7 @@
       <div class="login-button">
         <button ng-click="login()">Login</button>
       </div>
+
       <div class="logout-button">
         <button ng-click="logout()">Logout</button>
       </div>

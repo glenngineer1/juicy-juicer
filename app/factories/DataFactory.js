@@ -118,7 +118,7 @@ app.factory("DataFactory", function(FirebaseURL, $q, $http) {
   };
 
   let changesToFavorite = function(editedFavorite) {
-      console.log("editedFavorite", editedFavorite)
+      // console.log("editedFavorite", editedFavorite)
     return $q(function(resolve, reject) {
       $http.put(`${FirebaseURL}/favorites/${editedFavorite.id}.json`, editedFavorite)
       .success(function(ObjFromFirebase) {
@@ -128,7 +128,7 @@ app.factory("DataFactory", function(FirebaseURL, $q, $http) {
         reject(error);
       });
     });
-  }
+  };
 
   return {getFruitList, getVeggieList, getRecipeList, getFavoriteList, addToFavorites, deleteFavorite, getFavorite, changesToFavorite};
 

@@ -1,41 +1,61 @@
-.navbar {
-  background: lightgrey; }
+.body {
+  background-color: #FFFAC1;
+  padding-top: 160px; }
+
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #C7C443; }
 
 .links-div {
   display: inline-block;
   width: 60%; }
 
 .logo-design {
+  color: lightgrey;
+  font-style: oblique;
   border-radius: 50%;
-  height: 120px;
-  width: 120px; }
+  background: linear-gradient(#263FE0, lightblue);
+  font-size: 2em;
+  display: inline-block;
+  text-decoration: none;
+  padding-left: 5px; }
 
 .nav-links {
   list-style-type: none;
-  display: inline-block; }
+  display: inline-block;
+  font-size: 1.3em; }
 
-.logo {
-  display: inline-block; }
+.logo h1 {
+  text-align: center;
+  padding-top: 10px; }
 
 .login-area {
-  display: inline-block; }
+  display: inline-block;
+  font-size: 1.3em; }
 
 .login-email {
-  display: inline-block; }
+  display: inline-block;
+  padding-left: 30px;
+  color: #2C4CFF; }
 
 .login-password {
-  display: inline-block; }
+  display: inline-block;
+  color: #2C4CFF; }
 
 .login-button {
-  display: inline-block; }
+  display: inline-block;
+  padding-left: 8px; }
 
 .register-button {
   display: inline-block; }
 
 .logout-button {
-  display: inline-block; }
+  display: inline-block;
+  padding-left: 5px; }
 
-.recipe-name {
+.savedRecipeCard {
   border: solid black 2px;
   width: 27%;
   display: inline-block; }
@@ -46,17 +66,11 @@
 .fruit-list {
   border: solid black 2px; }
 
-.fruit-checkbox {
-  list-style-type: none; }
-
 .saved-veggie {
   border: solid black 2px; }
 
 .vegetable-list {
   border: solid black 2px; }
-
-.vegetable-checkbox {
-  list-style-type: none; }
 
 .ingredient-list {
   border: solid black 2px; }
