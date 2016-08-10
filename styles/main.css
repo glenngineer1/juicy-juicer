@@ -65,7 +65,8 @@
   width: 50%;
   font-size: 1.25em;
   color: #880000;
-  font-family: Optima, Segoe,  'Segoe UI', Candara, Calibri, Arial, sans-serif; }
+  font-family: Optima, Segoe,  'Segoe UI', Candara, Calibri, Arial, sans-serif;
+  text-align: justify; }
 
 .how-to {
   margin-left: 30%;
@@ -74,10 +75,11 @@
 
 .how-to-text {
   margin-left: 30%;
-  width: 65%;
+  width: 60%;
   font-size: 1.1em;
   font-family: Optima, Segoe,  'Segoe UI', Candara, Calibri, Arial, sans-serif;
-  color: #BE0000; }
+  color: #BE0000;
+  text-align: justify; }
 
 .savedRecipeCard {
   border: solid black 2px;
