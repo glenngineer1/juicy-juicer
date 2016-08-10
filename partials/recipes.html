@@ -1,7 +1,7 @@
 <div>
   <div class="recipes">
 
-    <h1>Juicy Juicer Recipes</h1>
+    <h1 class="recipe-header">Recipes</h1>
 
 <!-- //Search by filter in recipes// -->
     <div class="search-filter">
@@ -11,12 +11,16 @@
 <!-- //Injected recipes from firebase in to this div// -->
 
     <div ng-repeat="savedRecipe in recipes" class="savedRecipeCard">
-      <div class="recipe-name">
-        <div>{{savedRecipe.recipeName}}</div>
+      <div>
+        <div class="recipe-name">{{savedRecipe.recipeName}}</div>
+        <div class="ingredient">Ingredients</div>
+        <div class="ounces">Ounces</div>
+          <div class="ingredient-ounces">
             <div ng-repeat="ingredient in savedRecipe.ingredient">
-                <div class="recipe-ingredient-name">{{ingredient.name}}</div>
-                <div class="recipe-ingredient-amount">{{ingredient.ounces}}</div>
+              <div class="recipe-ingredient-name">{{ingredient.name}}</div>
+              <div class="recipe-ingredient-amount">{{ingredient.ounces}}</div>
             </div>
+          </div>
 
         <div class="recipe-description">Description: {{savedRecipe.description}}</div>
 
