@@ -18,12 +18,6 @@ app.controller("createJuiceCtrl", function($scope, DataFactory, AuthFactory, $lo
     $scope.veggies = veggieCollection;
   });
 
-  // DataFactory.getFavorite()
-  // .then(function(favorite) {
-  //   console.log("FC", favorite);
-  //   $scope.favorites = favorite
-  // });
-
   $scope.selection = [];
   $scope.toggleSelection = function toggleSelection(ingredientName) {
     var idx = $scope.selection.indexOf(ingredientName);
@@ -33,7 +27,7 @@ app.controller("createJuiceCtrl", function($scope, DataFactory, AuthFactory, $lo
     else {
       $scope.selection.push(ingredientName);
     }
-    // console.log("selected ingredients", $scope.selection);
+    console.log("selected ingredients", $scope.selection);
   };
 
   $scope.createNewRecipe = function() {

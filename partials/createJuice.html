@@ -35,7 +35,7 @@
   <h2>Ingredient List</h2>
     <div ng-repeat="ingredients in selection">
       <ul>
-        <li ng-init="newRecipe.ingredient[$index + 1].name=ingredients.name">{{ingredients.name}} <input type="input" placeholder="enter number of ounces" ng-model="newRecipe.ingredient[$index + 1].ounces"></input></li>
+        <li ng-init="newRecipe.ingredient[$index].name=ingredients.name">{{ingredients.name}} <input type="input" placeholder="enter number of ounces" ng-model="newRecipe.ingredient[$index].ounces"></input></li>
       </ul>
     </div>
   </div>

@@ -10,7 +10,7 @@
 
 <!-- //Injected recipes from firebase in to this div// -->
 
-    <div ng-repeat="savedRecipe in recipes">
+    <div ng-repeat="savedRecipe in recipes" class="savedRecipeCard">
       <div class="recipe-name">
         <div>{{savedRecipe.recipeName}}</div>
             <div ng-repeat="ingredient in savedRecipe.ingredient">
