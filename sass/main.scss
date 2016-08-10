@@ -11,6 +11,21 @@
   border: solid black 2px;
 }
 
+@mixin header {
+  color: #BE0000;
+  font-style: italic;
+  margin-left: 10%;
+}
+
+@mixin text {
+  margin-left: 10%;
+  width: 50%;
+  font-size: 1.25em;
+  color: #880000;
+  font-family: Optima, Segoe,  'Segoe UI', Candara, Calibri, Arial, sans-serif;
+  text-align: justify;
+}
+
 //BODY//
 .body {
   background-color: #FFFAC1;
@@ -85,18 +100,11 @@
 
 //Splash Page
 .story-of {
-  margin-left: 10%;
-  color: #BE0000;
-  font-style: italic;
+  @include header;
 }
 
 .story-text {
-  margin-left: 10%;
-  width: 50%;
-  font-size: 1.25em;
-  color: #880000;
-  font-family: Optima, Segoe,  'Segoe UI', Candara, Calibri, Arial, sans-serif;
-  text-align: justify;
+  @include text;
 }
 
 .how-to {
@@ -112,6 +120,15 @@
   font-family: Optima, Segoe,  'Segoe UI', Candara, Calibri, Arial, sans-serif;
   color: #BE0000;
   text-align: justify;
+}
+
+//Benefits//
+.benefits-of {
+  @include header;
+}
+
+.benefits-of-text {
+  @include text;
 }
 
 //Recipe HTML Styling//

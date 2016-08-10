@@ -56,9 +56,9 @@
   padding-left: 5px; }
 
 .story-of {
-  margin-left: 10%;
   color: #BE0000;
-  font-style: italic; }
+  font-style: italic;
+  margin-left: 10%; }
 
 .story-text {
   margin-left: 10%;
@@ -79,6 +79,19 @@
   font-size: 1.1em;
   font-family: Optima, Segoe,  'Segoe UI', Candara, Calibri, Arial, sans-serif;
   color: #BE0000;
+  text-align: justify; }
+
+.benefits-of {
+  color: #BE0000;
+  font-style: italic;
+  margin-left: 10%; }
+
+.benefits-of-text {
+  margin-left: 10%;
+  width: 50%;
+  font-size: 1.25em;
+  color: #880000;
+  font-family: Optima, Segoe,  'Segoe UI', Candara, Calibri, Arial, sans-serif;
   text-align: justify; }
 
 .savedRecipeCard {
