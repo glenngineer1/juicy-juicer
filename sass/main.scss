@@ -38,7 +38,7 @@
   position: fixed;
   top:0;
   width: 100%;
-  background: linear-gradient(#BE0000, #C7C443);
+  background: linear-gradient(#BE0000, #FFFAC1);
 }
 
 .links-div {
@@ -60,7 +60,7 @@
 .nav-links {
   @include list-style-type;
   @include inline-block;
-  font-size: 1.3em;
+  font-size: 1.1em;
 }
 
 .logo h1{
@@ -70,12 +70,14 @@
 
 .login-area {
   @include inline-block;
-  font-size: 1.3em;
+  font-size: 1.1em;
+  float: right;
+  margin-right: 8%;
 }
 
 .login-email {
   @include inline-block;
-  padding-left: 30px;
+  padding-left: 25px;
   color: #2C4CFF;
 }
 
@@ -139,7 +141,6 @@
 .recipe-header {
   @include header;
   text-align: center;
-  font-size: 2.75em;
   margin-left: 0;
 }
 
@@ -203,13 +204,31 @@
   color: #A52A2F;
 }
 
-.add-to-favorites{
+.add-to-favorites {
   text-align: center;
+}
+
+.add-to-favorites button {
+  background-color: #256D33;
+  color: #FFFAC1;
 }
 
 //Create Juice HTML Styling//
 .saved-fruit {
   @include border-type;
+  width: 80%;
+  margin-left: 10%;
+  padding: 10px;
+}
+
+.fruit-name-checkbox {
+  display: inline-block;
+  width: 200px;
+  color: #342649;
+}
+
+.checkbox {
+  float: left;
 }
 
 .fruit-list {
@@ -218,6 +237,15 @@
 
 .saved-veggie {
   @include border-type;
+  width: 80%;
+  margin-left: 10%;
+  padding: 10px;
+}
+
+.veggie-name-checkbox {
+  display: inline-block;
+  width: 200px;
+  color: #342649;
 }
 
 .vegetable-list {
@@ -225,18 +253,56 @@
 }
 
 .ingredient-list {
-  @include border-type;
+  @include list-style-type;
+  margin-left: 40%;
 }
 
-.color-of-drink {
-  width: 100px;
-  height: 100px;
-  @include border-type;
+.name-description {
+  width: 70%;
+  margin-left: 15%;
+}
+
+.name-your-drink, .describe-your-juice  {
+  color: #880000;
+  font-size: 1.1em;
+  margin-right: 5px;
+}
+
+.name-drink {
+  margin-left: 18px;
+  width: 80%;
+}
+
+.describe-drink {
+  width: 80%;
+  height: 60px;
+  margin-top: 5px;
+}
+
+.create-juice h2 {
+  color: #A50000;
+  font-style: italic;
+  text-align: center;
 }
 
 //Favorites/My Recipes Styling//
-.favorite-card {
-  @include border-type;
-  width: 27%;
-  @include inline-block;
+.get-favorites {
+  float: left;
+  margin-left: 5%;
 }
+
+.get-favorites button {
+  background-color: #256D33;
+  color: #FFFAC1;
+}
+
+.delete-favorites {
+  float: right;
+  margin-right: 5%;
+}
+
+.delete-favorites button {
+  background-color: #256D33;
+  color: #FFFAC1;
+}
+
