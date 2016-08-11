@@ -28,7 +28,8 @@
   font-size: 1.1em; }
 
 .a-links {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #4A83E2; }
 
 .logo h1 {
   text-align: center;
@@ -40,14 +41,18 @@
   float: right;
   margin-right: 8%; }
 
+.login-area button, input, textarea {
+  color: #4A83E2;
+  background: beige; }
+
 .login-email {
   display: inline-block;
   padding-left: 25px;
-  color: #2C4CFF; }
+  color: #4A83E2; }
 
 .login-password {
   display: inline-block;
-  color: #2C4CFF; }
+  color: #4A83E2; }
 
 .login-button {
   display: inline-block;
@@ -115,10 +120,12 @@
 
 .savedRecipeCard {
   border: solid black 2px;
+  border-color: #880000;
   width: 27%;
   display: inline-block;
   margin: 1% 2%;
-  height: 300px; }
+  height: 300px;
+  border-radius: 7%; }
 
 .recipe-name {
   text-align: center;
@@ -169,6 +176,7 @@
 
 .saved-fruit {
   border: solid black 2px;
+  border-color: #880000;
   width: 80%;
   margin-left: 10%;
   padding: 10px; }
@@ -186,8 +194,9 @@
 
 .saved-veggie {
   border: solid black 2px;
+  border-color: #880000;
   width: 80%;
-  margin-left: 10%;
+  margin: 1% 0 0 10%;
   padding: 10px; }
 
 .veggie-name-checkbox {
