@@ -1,67 +1,61 @@
 <div>
   <div class="create-juice">
 
-    <h1>Modify Your Juice</h1>
-    <h3>Click boxes to select or de-select ingredients</h3>
+    <h1 class="recipe-header">Modify Your Juice</h1>
+    <!-- <h2>Click boxes to select or de-select ingredients</h2> -->
 
   <!-- //Available Fruit List// -->
-  <div class="saved-fruit">
-    <label ng-repeat="fruitName in fruits">
-      <input class="fruit-name-checkbox"
+<!--   <div class="saved-fruit">
+    <div ng-repeat="fruitName in fruits" class="fruit-name-checkbox">
+      {{fruitName.name}}
+      <input
+        class="checkbox"
         type="checkbox"
         name="selectedFruits[]"
         value="{{fruitName}}"
         ng-checked="selection.indexOf(fruitName) > -1"
-        ng-click="toggleSelection(fruitName)"
-       > {{fruitName.name}}
-    </label>
-  </div>
+        ng-click="toggleSelection(fruitName)">
+    </div>
+  </div> -->
 
   <!-- //Available Vegetable List// -->
-  <div class="saved-veggie">
-    <label ng-repeat="veggieName in veggies">
-      <input class="veggie-name-checkbox"
+ <!--  <div class="saved-veggie">
+    <div ng-repeat="veggieName in veggies" class="veggie-name-checkbox">
+      {{veggieName.name}}
+      <input
+        class="checkbox"
         type="checkbox"
         name="selectedVeggies[]"
         value="{{veggieName}}"
         ng-checked="selection.indexOf(veggieName) > -1"
-        ng-click="toggleSelection(veggieName)"
-       > {{veggieName.name}}
-    </label>
-  </div>
+        ng-click="toggleSelection(veggieName)">
+    </div>
+  </div> -->
 
   <!-- //Place where checked ingredients show up with a blank input for the amount of ounces each ingredient will use// -->
-  <div class="ingredient-list">
+  <div>
   <h2>Ingredient List</h2>
     <div ng-repeat="ingredients in single.ingredient">
       <ul>
-        <li ng-init="ingredients.name">{{ingredients.name}} <input type="input" placeholder="enter number of ounces" ng-model="ingredients.ounces"></input></li>
+        <li class="ingredient-list" ng-init="ingredients.name">{{ingredients.name}} <input type="input" placeholder="Number of ounces" ng-model="ingredients.ounces"></input></li>
       </ul>
     </div>
   </div>
 
-  <!-- //Submit button to create color of juice// -->
-<!--       <div class="submit-for-color">
-        <button>Click for color of drink</button>
-      </div>
-
-      <div class="color-of-drink">
-        <div>
-          Color Swatch - TBD
-        </div>
-      </div>
- -->
-      <div class="name-drink">
-        <label for="name of drink">Name your juice:</label>
-        <input type="text" placeholder="enter name of drink" ng-model="single.recipeName" ng-init="single.recipeName" />
-      </div>
-
-      <div class="describe-drink">
-        <label for="description of drink">Describe your juice:</label>
-        <input type="text" placeholder="describe your drink here" ng-model="single.description" ng-init="single.description" />
+    <div class="name-description">
+      <div>
+        <label class="name-your-drink" for="name of drink">Name your juice:</label>
+        <input class="name-drink" type="text" placeholder="enter name of drink" ng-model="single.recipeName" ng-init="single.recipeName" />
       </div>
 
       <div>
+        <label class="describe-your-juice"  for="description of drink">Describe your juice:</label>
+        <textarea class="describe-drink" type="text" placeholder="describe your drink here" ng-model="single.description" ng-init="single.description" />
+      </div>
+    </div>
+
+
+      <div class="add-to-favorites">
         <button ng-click="saveChanges(single.id)">Save Changes</button>
       </div>
 

@@ -63,6 +63,11 @@
   font-size: 1.1em;
 }
 
+.a-links {
+  text-decoration: none;
+  color: #4A83E2;
+}
+
 .logo h1{
   text-align: center;
   padding-top: 10px;
@@ -75,15 +80,20 @@
   margin-right: 8%;
 }
 
+.login-area button, input, textarea {
+  color: #4A83E2;
+  background: beige;
+}
+
 .login-email {
   @include inline-block;
   padding-left: 25px;
-  color: #2C4CFF;
+  color: #4A83E2;
 }
 
 .login-password {
   @include inline-block;
-  color: #2C4CFF;
+  color: #4A83E2;
 }
 
 .login-button {
@@ -107,6 +117,25 @@
 
 .story-text {
   @include text;
+  @include inline-block;
+}
+
+.image-fresh-juices {
+  height: 180px;
+  width: 180px;
+  @include  inline-block;
+  float: right;
+  margin-right: 150px;
+  border-radius: 50%;
+}
+
+.green-juice {
+  height: 150px;
+  width: 250px;
+  @include  inline-block;
+  float: left;
+  margin: 115px 0 0 100px;
+  border-radius: 50%;
 }
 
 .how-to {
@@ -151,10 +180,12 @@
 
 .savedRecipeCard {
   @include border-type;
-  width: 27%;
+  border-color: #880000;
+  width: 29%;
   @include inline-block;
   margin: 1% 2%;
   height: 300px;
+  border-radius: 7%;
 }
 
 .recipe-name {
@@ -216,6 +247,7 @@
 //Create Juice HTML Styling//
 .saved-fruit {
   @include border-type;
+  border-color: #880000;
   width: 80%;
   margin-left: 10%;
   padding: 10px;
@@ -224,7 +256,7 @@
 .fruit-name-checkbox {
   display: inline-block;
   width: 200px;
-  color: #342649;
+  color: #E2A315;
 }
 
 .checkbox {
@@ -237,15 +269,16 @@
 
 .saved-veggie {
   @include border-type;
+  border-color: #880000;
   width: 80%;
-  margin-left: 10%;
+  margin: 1% 0 0 10%;
   padding: 10px;
 }
 
 .veggie-name-checkbox {
   display: inline-block;
   width: 200px;
-  color: #342649;
+  color: #37AB26;
 }
 
 .vegetable-list {
