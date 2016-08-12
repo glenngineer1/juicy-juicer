@@ -76,7 +76,24 @@
   font-size: 1.25em;
   color: #880000;
   font-family: Optima, Segoe,  'Segoe UI', Candara, Calibri, Arial, sans-serif;
-  text-align: justify; }
+  text-align: justify;
+  display: inline-block; }
+
+.image-fresh-juices {
+  height: 180px;
+  width: 180px;
+  display: inline-block;
+  float: right;
+  margin-right: 150px;
+  border-radius: 50%; }
+
+.green-juice {
+  height: 150px;
+  width: 250px;
+  display: inline-block;
+  float: left;
+  margin: 115px 0 0 100px;
+  border-radius: 50%; }
 
 .how-to {
   margin-left: 30%;
@@ -121,7 +138,7 @@
 .savedRecipeCard {
   border: solid black 2px;
   border-color: #880000;
-  width: 27%;
+  width: 29%;
   display: inline-block;
   margin: 1% 2%;
   height: 300px;

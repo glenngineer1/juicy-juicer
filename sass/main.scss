@@ -117,6 +117,25 @@
 
 .story-text {
   @include text;
+  @include inline-block;
+}
+
+.image-fresh-juices {
+  height: 180px;
+  width: 180px;
+  @include  inline-block;
+  float: right;
+  margin-right: 150px;
+  border-radius: 50%;
+}
+
+.green-juice {
+  height: 150px;
+  width: 250px;
+  @include  inline-block;
+  float: left;
+  margin: 115px 0 0 100px;
+  border-radius: 50%;
 }
 
 .how-to {
@@ -162,7 +181,7 @@
 .savedRecipeCard {
   @include border-type;
   border-color: #880000;
-  width: 27%;
+  width: 29%;
   @include inline-block;
   margin: 1% 2%;
   height: 300px;
