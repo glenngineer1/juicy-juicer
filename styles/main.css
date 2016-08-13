@@ -111,6 +111,10 @@
 .how-to-text li {
   padding-bottom: 10px; }
 
+.benefits {
+  display: inline-block;
+  width: 62%; }
+
 .benefits-of {
   color: #A50000;
   font-style: italic;
@@ -122,7 +126,17 @@
   font-size: 1.25em;
   color: #880000;
   font-family: Optima, Segoe,  'Segoe UI', Candara, Calibri, Arial, sans-serif;
-  text-align: justify; }
+  text-align: justify;
+  width: 65%;
+  margin-left: 12%; }
+
+.benefits-of-text li {
+  padding: 5px; }
+
+.five-lined-juices {
+  padding-bottom: 15px;
+  width: 400px;
+  height: 250px; }
 
 .recipe-header {
   color: #A50000;
@@ -142,7 +156,8 @@
   display: inline-block;
   margin: 1% 2%;
   height: 300px;
-  border-radius: 7%; }
+  border-radius: 7%;
+  box-shadow: 3px 3px 0 #763130; }
 
 .recipe-name {
   text-align: center;

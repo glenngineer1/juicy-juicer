@@ -5,12 +5,12 @@
 
 <!-- //Search by filter in recipes// -->
     <div class="search-filter">
-      <input type="text" placeholder="search your favorites">
+      <input type="text" placeholder="search your favorites" ng-model="searchText">
     </div>
 
 <!-- //Injected recipes from firebase in to this div// -->
 
-    <div ng-repeat="savedRecipe in recipes" class="savedRecipeCard">
+    <div ng-repeat="savedRecipe in recipes | filter: searchText" class="savedRecipeCard" >
       <div>
         <div class="recipe-name">{{savedRecipe.recipeName}}</div>
         <div class="ingredient">Ingredients</div>

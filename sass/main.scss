@@ -158,12 +158,29 @@
 }
 
 //Benefits//
+.benefits {
+  @include inline-block;
+  width: 62%;
+}
+
 .benefits-of {
   @include header;
 }
 
 .benefits-of-text {
   @include text;
+  width: 65%;
+  margin-left: 12%;
+}
+
+.benefits-of-text li {
+  padding: 5px;
+}
+
+.five-lined-juices {
+  padding-bottom: 15px;
+  width: 400px;
+  height: 250px;
 }
 
 //Recipe HTML Styling//
@@ -186,6 +203,7 @@
   margin: 1% 2%;
   height: 300px;
   border-radius: 7%;
+  box-shadow: 3px 3px 0 #763130;
 }
 
 .recipe-name {
