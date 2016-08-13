@@ -5,11 +5,11 @@
 
 <!-- //Search by filter in favorite drinks and recipes// -->
     <div class="search-filter">
-      <input type="text" placeholder="search your favorites">
+      <input type="text" placeholder="search your favorites" ng-model="searchText">
     </div>
 
     <!-- //Div to inject favorites// -->
-    <div ng-repeat="favorite in favorites" class="savedRecipeCard">
+    <div ng-repeat="favorite in favorites | filter: searchText" class="savedRecipeCard">
       <div class="recipe-name">{{favorite.recipeName}}</div>
       <div class="ingredient">Ingredients</div>
       <div class="ounces">Ounces</div>
