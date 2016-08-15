@@ -35,5 +35,5 @@ app.config(function($routeProvider, FBCreds) {
       templateUrl: 'partials/edit.html',
       controller: 'editCtrl'
     })
-    .otherwise('/');
+    // .otherwise('/');
 });

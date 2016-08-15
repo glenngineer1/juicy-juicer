@@ -27,7 +27,7 @@ app.controller("createJuiceCtrl", function($scope, DataFactory, AuthFactory, $lo
     else {
       $scope.selection.push(ingredientName);
     }
-    console.log("selected ingredients", $scope.selection);
+    // console.log("selected ingredients", $scope.selection);
   };
 
   $scope.createNewRecipe = function() {
