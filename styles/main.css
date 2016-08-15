@@ -157,7 +157,7 @@
   margin: 1% 2%;
   height: 300px;
   border-radius: 7%;
-  box-shadow: 3px 3px 0 #763130; }
+  box-shadow: 3px 3px 0 #BF4C4A; }
 
 .recipe-name {
   text-align: center;
@@ -216,7 +216,8 @@
 .fruit-name-checkbox {
   display: inline-block;
   width: 200px;
-  color: #E2A315; }
+  color: #E2A315;
+  margin-left: 5%; }
 
 .checkbox {
   float: left; }
@@ -234,14 +235,21 @@
 .veggie-name-checkbox {
   display: inline-block;
   width: 200px;
-  color: #37AB26; }
+  color: #37AB26;
+  margin-left: 5%; }
 
 .vegetable-list {
   border: solid black 2px; }
 
 .ingredient-list {
   list-style-type: none;
-  margin-left: 40%; }
+  margin-left: 39%;
+  color: #A50000;
+  font-size: 1.1em; }
+
+.ingredient-selected-ounces {
+  margin-right: 65%;
+  float: right; }
 
 .name-description {
   width: 70%;
@@ -281,3 +289,7 @@
 .delete-favorites button {
   background-color: #256D33;
   color: #FFFAC1; }
+
+.edit-ingredient-ounces {
+  margin-right: 70%;
+  float: right; }

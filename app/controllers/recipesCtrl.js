@@ -15,7 +15,7 @@ app.controller("recipesCtrl", function($scope, DataFactory, AuthFactory, $route,
     });
 
     $scope.createRecipeFavorite = function(recipe) {
-      console.log("recipe", recipe);
+      // console.log("recipe", recipe);
     // console.log("userID", $scope.newRecipe.userId);
     // console.log("$scope.recipe[recipe]", $scope.recipes[recipe]);
     $scope.recipes[recipe].userId = AuthFactory.getUser();

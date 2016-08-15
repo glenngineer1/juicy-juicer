@@ -203,7 +203,7 @@
   margin: 1% 2%;
   height: 300px;
   border-radius: 7%;
-  box-shadow: 3px 3px 0 #763130;
+  box-shadow: 3px 3px 0 #BF4C4A;
 }
 
 .recipe-name {
@@ -275,6 +275,7 @@
   display: inline-block;
   width: 200px;
   color: #E2A315;
+  margin-left: 5%;
 }
 
 .checkbox {
@@ -297,6 +298,7 @@
   display: inline-block;
   width: 200px;
   color: #37AB26;
+  margin-left: 5%;
 }
 
 .vegetable-list {
@@ -305,7 +307,14 @@
 
 .ingredient-list {
   @include list-style-type;
-  margin-left: 40%;
+  margin-left: 39%;
+  color: #A50000;
+  font-size: 1.1em;
+}
+
+.ingredient-selected-ounces {
+  margin-right: 65%;
+  float: right;
 }
 
 .name-description {
@@ -357,3 +366,8 @@
   color: #FFFAC1;
 }
 
+//Edit Styling//
+.edit-ingredient-ounces{
+  margin-right: 70%;
+  float: right;
+}
